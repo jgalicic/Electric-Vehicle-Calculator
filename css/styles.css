@@ -1,0 +1,143 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: lato, 'sans-serif'; }
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+  background-color: #36597d; }
+
+header h1 {
+  color: #EEE;
+  font-size: 2em;
+  padding-bottom: 2px; }
+
+h2 {
+  font-size: 1.2em; }
+
+p {
+  text-align: center; }
+
+/***************** 
+INPUT 
+******************/
+input {
+  font-weight: bold;
+  color: #ED474A;
+  width: 90px;
+  outline: none;
+  border: none;
+  background-color: #d2e4e6;
+  text-align: center;
+  caret-color: black;
+  margin: 0 auto; }
+
+.input-miles {
+  font-size: 3em;
+  background-color: #d2e4e6;
+  padding-bottom: 10px; }
+
+.range {
+  font-size: 2em; }
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ED474A;
+  opacity: 1;
+  /* Firefox */ }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ED474A; }
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #ED474A; }
+
+/***************** 
+FLEXBOX
+******************/
+.container {
+  flex-direction: column; }
+
+.box0 {
+  padding-top: 30px;
+  text-align: center; }
+  .box0 p {
+    font-size: .8em; }
+  .box0 .daily-miles {
+    position: relative;
+    bottom: 8px;
+    background-color: white; }
+
+.flexbox {
+  display: flex;
+  min-height: 30px; }
+
+.col {
+  flex-direction: column;
+  flex-grow: 1; }
+
+.row {
+  flex-direction: row;
+  flex-grow: 1; }
+
+.bigbox {
+  flex-direction: row; }
+
+.innerbigbox {
+  width: 100%; }
+
+.bb-left {
+  border-right: 8px solid #666; }
+  .bb-left .row1 .col3 {
+    margin: 10px;
+    background-color: #ECECEC; }
+    .bb-left .row1 .col3 .price {
+      font-size: 2em; }
+
+.bb-right {
+  border-left: 8px solid #666; }
+  .bb-right .row1 .col3 {
+    margin: 10px;
+    background-color: #ECECEC; }
+    .bb-right .row1 .col3 .price {
+      font-size: 2em; }
+  .bb-right .row2 {
+    margin: 10px;
+    background-color: #ECECEC; }
+
+.circle-wrapper {
+  min-width: 100px;
+  width: 100%;
+  padding-top: 100%;
+  position: relative; }
+
+.circle, .rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 5px solid #36597d;
+  border-radius: 100%;
+  background: linear-gradient(#fcfcfc 60%, #36597d 30%), linear-gradient(to bottom, #fcfcfc 0, #f1f1f1 100%); }
+
+.rectangle {
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 10%; }
+
+.EV-kwh {
+  margin-top: 20px;
+  font-size: 1.2em;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none; }

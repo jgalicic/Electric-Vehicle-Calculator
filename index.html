@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electric Vehicle Calculator</title>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+	<header>
+
+		<h1>Electric Vehicle Calculator</h1>
+
+	</header>
+
+	<div class="flexbox container">
+
+		<div class="box0">
+			<h2> My Daily Commute is: </h2>
+			<p> (Round Trip) </p>
+
+			  <input type="text" name="dailyMiles" id="dailyMiles" class="input-miles">
+			  <p class="daily-miles"> miles </p>
+
+		</div> <!-- end box0 -->
+
+		<div class="flexbox bigbox">
+
+			<div class="innerbigbox bb-left">
+
+				<div class="flexbox row row1">
+
+					<div class="flexbox col col1">
+							
+							<p> My EV (Full) Range is: </p>
+
+							<input type="text" name="EV-range" id="evRange" class="range">
+
+							<p> miles </p>
+
+							<br>
+
+							<p> My EV Battery is: </p>
+
+							<input type="text" name="EV-battery" id="evBattery" class="EV-battery">
+
+							<p> Kw/h </p>
+
+					</div> <!-- end col2 -->
+
+					<div class="flexbox col col2">
+
+						<div class="circle-wrapper">
+
+							<div class="circle">
+
+								<input type="text" name="perkwh" id="perkwh" class="EV-kwh">
+
+								<p> per KW/h </p>
+
+							</div> <!-- end circle -->
+						</div> <!-- end circle-wrapper -->
+					</div> <!-- end div -->
+
+					<div class="flexbox col col3">
+							<input type="text" class="price" id="dailyElectricCost">
+
+							<p>(Approx)</p>
+
+							<p>Daily electricity cost</p>
+
+					</div> <!-- end col3 -->
+				</div> <!-- end row1 -->
+			</div> <!-- end col1 -->
+
+			<div class="innerbigbox bb-right">
+
+				<div class="flexbox row row1">
+
+					<div class="flexbox col col3">
+
+							<input type="text" class="price" id="dailyGasCost">
+
+							<p>(Approx)</p>
+
+							<p>Daily gasoline cost</p>
+
+					</div> <!-- end col3 -->
+					
+					<div class="flexbox col col2">
+
+						<div class="circle-wrapper">
+
+							<div class="rectangle">
+
+								<input type="text" name="EV-battery" id="pergallon" class="EV-kwh">
+
+								<p> per gallon </p>
+
+							</div> <!-- end circle -->
+						</div> <!-- end circle-wrapper -->
+					</div> <!-- end div -->
+
+					<div class="flexbox col col1">
+							
+							<p> My Gas Vehicle gets: </p>
+
+							<input type="text" name="mpg" id="mpg" class="range">
+
+							<p> MPG </p>
+
+							<br>
+
+					</div> <!-- end col1 -->
+				</div> <!-- end row1 -->
+			</div> <!-- end bb-right -->
+		</div> <!-- end bigbox -->
+
+		<div class="flexbox savings">
+
+		</div> <!-- end savings -->
+
+	<div> <!-- end container -->
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
