@@ -1,3 +1,5 @@
+// All contents copyright 2018 by Justin Galicic
+
 
 $(document).ready(function() {
 
@@ -5,9 +7,9 @@ $(document).ready(function() {
 	var evRange = document.getElementById('evRange');
 	var evBattery = document.getElementById('evBattery');
 	var perkwh = document.getElementById('perkwh');
-	var dailyGasPrice = document.getElementById('dailyGasCost');
-	var dailyElectricPrice = document.getElementById('dailyElectricCost');
-	var pergallon = document.getElementById('pergallon');
+	var dailyElectricCost = document.getElementById('dailyElectricCost');
+	var dailyGasCost = document.getElementById('dailyGasCost');
+	var pricePerGallon = document.getElementById('pricePerGallon');
 	var mpg = document.getElementById('mpg');
 	var annualGasPrice = document.getElementById('annual-gas-price');
 	var annualElectricPrice = document.getElementById('annual-electric-price');
@@ -15,19 +17,30 @@ $(document).ready(function() {
 
 	let data = {
 		dailyMiles: 30,
+		evRange: 295,
+		evBattery: 100,
+		perkwh: .2,
+		dailyGasCost: 5,
+		pricePerGallon: 3.20,
+		mpg: 28
 	}
+
+	function preloadedData(){
+		$(evRange).val(data.evRange);
+		$(evBattery).val(data.evBattery);
+		$(perkwh).val('$' + data.perkwh.toFixed(2));
+		$(pricePerGallon).val('$' + data.pricePerGallon.toFixed(2));
+		$(mpg).val(data.mpg);
+	};
+
+	preloadedData();
 
 	$(dailyMiles).on('keyup blur', function() {
 
 		data.dailyMiles = dailyMiles.value;
-		
-		$(evRange).val(data.dailyMiles);
-		$(evBattery).val(data.dailyMiles);
-		$(perkwh).val('$0.' + data.dailyMiles);
-		$(pergallon).val(data.dailyMiles);
-		$(mpg).val(data.dailyMiles);
-		$(dailyElectricPrice).val('$' + data.dailyMiles);
-		$(dailyGasPrice).val('$' + data.dailyMiles);
+		$(dailyElectricCost).val('$' + ((data.evBattery/data.evRange) * data.perkwh * data.dailyMiles).toFixed(2));
+		$(dailyGasCost).val('$' + ((data.dailyMiles/data.mpg) * data.pricePerGallon).toFixed(2));
 	});
-
 });
+
+// All contents copyright 2018 by Justin Galicic
