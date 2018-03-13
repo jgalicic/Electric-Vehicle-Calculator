@@ -18,163 +18,157 @@
 
 	<header>
 
-		<h1>Electric Vehicle Calculator</h1>
+	 	<h1>Electric Vehicle Calculator</h1>
 
 	</header>
 
-	<div class="flexbox container">
 
-		<div class="box0">
+ 	<div class="flexbox container">
+
+	 	<div class="flexbox box toprow ev-compare-select">
+
+
+			<div class="select-title select-title-left">
+				<h2>Select an electric vehicle to compare</h2>
+			</div>
+
+			<div class="flexbox select select-left">
+
+				<select>
+				  <option value="TeslaModelX100D">Tesla Model X 100D</option>
+				  <option value="TeslaModelX75D">Tesla Model X 75D</option>
+				  <option value="TeslaModelS100D">Tesla Model S 100D</option>
+				  <option value="TeslaModelS75D">Tesla Model S 75D</option>
+				</select>
+
+			</div>
+	 	</div>
+
+	 	<div class="flexbox box toprow daily-commute">
+
+
 			<h2> My Daily Commute is: </h2>
 			<p> (Round Trip) </p>
 
-			  <input type="text" name="dailyMiles" id="dailyMiles" class="input-miles">
-			  <p class="daily-miles"> miles </p>
-
-		</div> <!-- end box0 -->
-
-		<div class="flexbox box1">
+		  	<input type="text" name="dailyMiles" id="dailyMiles" class="input-miles">
+		  	<p class="daily-miles"> miles </p>
 
 
 
-			<div class="flexbox col">
+	 	</div>
 
-				<div class="select-title">
-					<h2>Select an electric vehicle to compare</h2>
-				</div>
+	 	<div class="flexbox box toprow gas-compare-select">
 
-				<div class="flexbox select select-left">
-
-					<select>
-					  <option value="TeslaModelX100D">Tesla Model X 100D</option>
-					  <option value="TeslaModelX75D">Tesla Model X 75D</option>
-					  <option value="TeslaModelS100D">Tesla Model S 100D</option>
-					  <option value="TeslaModelS75D">Tesla Model S 75D</option>
-					</select>
-				</div>
+ 			<div class="select-title select-title-right">
+				<h2>Select a gas vehicle to compare</h2>
 			</div>
 
-			<div class="flexbox col">
+			<div class="flexbox select select-right">
 
-				<div class="select-title select-right-title">
-					<h2>Select a gas vehicle to compare</h2>
-				</div>
+				<select>
+				  <option value="Audi">Audi</option>
+				  <option value="BMW">BMW</option>
+				  <option value="Volkswagen">Volkswagen</option>
+				  <option value="Volvo">Volvo</option>
+				</select>
 
-				<div class="flexbox select select-right">
-
-					<select>
-					  <option value="volvo">Volvo</option>
-					  <option value="saab">Saab</option>
-					  <option value="mercedes">Mercedes</option>
-					  <option value="audi">Audi</option>
-					</select>
-
-				</div>
 			</div>
-		</div> <!-- end box1 -->
+	 	</div>
 
-		<div class="center-box">
 
-			<div class="flexbox bigbox">
+	 	<!-- EV -->
+	 	<div class="flexbox box botrow ev-row-compare">
 
-				<div class="innerbigbox bb-left">
+			<div class="flexbox row">
 
-					<div class="flexbox row row1">
-
-						<div class="flexbox col col1">
-								
-								<p> My EV (Full) Range is: </p>
-
-								<input type="text" name="EV-range" id="evRange" class="range">
-
-								<p> miles </p>
-
-								<br>
-
-								<p> My EV Battery is: </p>
-
-								<input type="text" name="EV-battery" id="evBattery" class="EV-battery">
-
-								<p> Kw/h </p>
-
-						</div> <!-- end col2 -->
-
-						<div class="flexbox col col2">
-
-							<div class="circle-wrapper">
-
-								<div class="circle">
-
-									<input type="text" name="perkwh" id="perkwh" class="EV-kwh">
-
-									<p> per KW/h </p>
-
-								</div> <!-- end circle -->
-							</div> <!-- end circle-wrapper -->
-						</div> <!-- end div -->
-
-						<div class="flexbox col col3">
-								<input type="text" class="price" id="dailyElectricCost">
-
-								<p>(Approx)</p>
-
-								<p>Daily electricity cost</p>
-
-						</div> <!-- end col3 -->
-					</div> <!-- end row1 -->
-				</div> <!-- end col1 -->
-
-				<div class="innerbigbox bb-right">
-
-					<div class="flexbox row row1">
-
-						<div class="flexbox col col3">
-
-								<input type="text" class="price" id="dailyGasCost">
-
-								<p>(Approx)</p>
-
-								<p>Daily gasoline cost</p>
-
-						</div> <!-- end col3 -->
+				<div class="flexbox col col1">
 						
-						<div class="flexbox col col2">
+						<p> My EV (Full) Range is: </p>
 
-							<div class="circle-wrapper">
+						<input type="text" name="EV-range" id="evRange" class="range">
 
-								<div class="rectangle">
+						<p> miles </p>
 
-									<input type="text" name="pricePerGallon" id="pricePerGallon" class="EV-kwh">
+						<br>
 
-									<p> per gallon </p>
+						<p> My EV Battery is: </p>
 
-								</div> <!-- end circle -->
-							</div> <!-- end circle-wrapper -->
-						</div> <!-- end col2 -->
+						<input type="text" name="EV-battery" id="evBattery" class="EV-battery">
 
-						<div class="flexbox col col1">
-								
-								<p> My Gas Vehicle gets: </p>
+						<p> Kw/h </p>
 
-								<input type="text" name="mpg" id="mpg" class="range">
+				</div> <!-- end col2 -->
 
-								<p> MPG </p>
+				<div class="flexbox col col2">
 
-								<br>
+					<div class="circle-wrapper">
 
-						</div> <!-- end col1 -->
-					</div> <!-- end row1 -->
-				</div> <!-- end bb-right -->
-			</div> <!-- end bigbox -->
-		</div> <!-- end center-box -->	
+						<div class="circle">
 
-		<div class="flexbox savings">
+							<input type="text" name="perkwh" id="perkwh" class="EV-kwh">
 
-		</div> <!-- end savings -->
+							<p> per KW/h </p>
 
-	<div> <!-- end container -->
+						</div> <!-- end circle -->
+					</div> <!-- end circle-wrapper -->
+				</div> <!-- end div -->
 
+				<div class="flexbox col col3">
+						<p class="price" id="dailyElectricCost"></p>
+
+						<p>(Approx)</p>
+
+						<p>Daily electricity cost</p>
+
+				</div> <!-- end col3 -->
+			</div> <!-- end row1 -->
+
+	 	</div>
+
+	 	<div class="flexbox box botrow gas-row-compare">
+
+			<div class="flexbox row">
+
+				<div class="flexbox col col3">
+
+						<p class="price" id="dailyGasCost"></p>
+
+						<p>(Approx)</p>
+
+						<p>Daily gasoline cost</p>
+
+				</div> <!-- end col3 -->
+				
+				<div class="flexbox col col2">
+
+					<div class="circle-wrapper">
+
+						<div class="rectangle">
+
+							<input type="text" name="pricePerGallon" id="pricePerGallon" class="EV-kwh">
+
+							<p> per gallon </p>
+
+						</div> <!-- end circle -->
+					</div> <!-- end circle-wrapper -->
+				</div> <!-- end col2 -->
+
+				<div class="flexbox col col1">
+						
+					<p> My Gas Vehicle gets: </p>
+
+					<input type="text" name="mpg" id="mpg" class="range">
+
+					<p> MPG </p>
+
+				</div> <!-- end col1 -->
+			</div> <!-- end row1 -->
+	 	</div>
+	</div>
+
+
+ 
 <script src="js/script.js"></script>
-
+ 
 </body>
 </html>

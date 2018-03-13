@@ -32,8 +32,8 @@ $(document).ready(function() {
 		$(perkwh).val('$' + data.perkwh.toFixed(2));
 		$(pricePerGallon).val('$' + data.pricePerGallon.toFixed(2));
 		$(mpg).val(data.mpg);
-		$(dailyElectricCost).val('$' + ((data.evBattery/data.evRange) * data.perkwh * data.dailyMiles).toFixed(2));
-		$(dailyGasCost).val('$' + ((data.dailyMiles/data.mpg) * data.pricePerGallon).toFixed(2));
+		$(dailyElectricCost).text('$' + ((data.evBattery/data.evRange) * data.perkwh * data.dailyMiles).toFixed(2));
+		$(dailyGasCost).text('$' + ((data.dailyMiles/data.mpg) * data.pricePerGallon).toFixed(2));
 	};
 
 	preloadedData();
@@ -41,8 +41,8 @@ $(document).ready(function() {
 	$(dailyMiles).on('keyup blur', function() {
 
 		data.dailyMiles = dailyMiles.value;
-		$(dailyElectricCost).val('$' + ((data.evBattery/data.evRange) * data.perkwh * data.dailyMiles).toFixed(2));
-		$(dailyGasCost).val('$' + ((data.dailyMiles/data.mpg) * data.pricePerGallon).toFixed(2));
+		$(dailyElectricCost).text('$' + ((data.evBattery/data.evRange) * data.perkwh * data.dailyMiles).toFixed(2));
+		$(dailyGasCost).text('$' + ((data.dailyMiles/data.mpg) * data.pricePerGallon).toFixed(2));
 	});
 });
 
