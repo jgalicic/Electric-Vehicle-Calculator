@@ -46,7 +46,8 @@ input {
 
 .input-miles {
   font-size: 3em;
-  background-color: #d2e4e6; }
+  background-color: #d2e4e6;
+  width: 120px; }
 
 .range {
   font-size: 2em; }
@@ -136,7 +137,7 @@ FLEXBOX
   border-left: 5px solid #666; }
 
 .circle-wrapper {
-  min-width: 100px;
+  min-height: 150px;
   width: 100%;
   padding-top: 100%;
   position: relative; }
@@ -165,6 +166,15 @@ FLEXBOX
   border: none; }
 
 @media screen and (max-width: 720px) {
+  header h1 {
+    font-size: 1.4em; }
+
+  .circle p {
+    font-size: .7em; }
+
+  .rectangle p {
+    font-size: .7em; }
+
   .toprow, .botrow {
     width: 100%; }
 
@@ -190,5 +200,11 @@ FLEXBOX
       order: 2; }
     .gas-row-compare div .col1 {
       order: 1; } }
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.2em; }
+
+  .price {
+    font-size: 2em; } }
 
 /*# sourceMappingURL=styles.css.map */
