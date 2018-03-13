@@ -26,11 +26,14 @@ $(document).ready(function() {
 	}
 
 	function preloadedData(){
+		$(dailyMiles).val(data.dailyMiles);
 		$(evRange).val(data.evRange);
 		$(evBattery).val(data.evBattery);
 		$(perkwh).val('$' + data.perkwh.toFixed(2));
 		$(pricePerGallon).val('$' + data.pricePerGallon.toFixed(2));
 		$(mpg).val(data.mpg);
+		$(dailyElectricCost).val('$' + ((data.evBattery/data.evRange) * data.perkwh * data.dailyMiles).toFixed(2));
+		$(dailyGasCost).val('$' + ((data.dailyMiles/data.mpg) * data.pricePerGallon).toFixed(2));
 	};
 
 	preloadedData();
