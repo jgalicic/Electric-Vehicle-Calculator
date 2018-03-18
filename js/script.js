@@ -94,10 +94,7 @@ $(document).ready(function() {
 
 
 	function preloadedData(){
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 		$(dailyMiles).val(data.dailyMiles);
 		$(evRange).val(data.evRange);
 		$(evBattery).val(data.evBattery);
@@ -232,13 +229,6 @@ $(document).ready(function() {
 	}
 
 
-<<<<<<< HEAD
-=======
-		data.dailyMiles = dailyMiles.value;
-		$(dailyElectricCost).text('$' + ((data.evBattery/data.evRange) * data.perkwh * data.dailyMiles).toFixed(2));
-		$(dailyGasCost).text('$' + ((data.dailyMiles/data.mpg) * data.pricePerGallon).toFixed(2));
-	});
->>>>>>> origin/master
 });
 
 
