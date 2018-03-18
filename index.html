@@ -18,120 +18,166 @@
 
 	<header>
 
-		<h1>Electric Vehicle Calculator</h1>
+	 	<h1>Electric Vehicle Calculator</h1>
 
 	</header>
 
-	<div class="flexbox container">
 
-		<div class="box0">
+ 	<div class="flexbox container">
+
+	 	<div class="flexbox box toprow ev-compare-select">
+
+
+			<div class="select-title select-title-left">
+				<h2>Select an electric vehicle to compare</h2>
+			</div>
+
+			<div class="flexbox select select-left">
+
+				<select id="ev-select">
+				  <option value="TeslaModelX100D">Tesla Model X 100D</option>
+				  <option value="TeslaModelX75D">Tesla Model X 75D</option>
+				  <option value="TeslaModelS100D">Tesla Model S 100D</option>
+				  <option value="TeslaModelS75D">Tesla Model S 75D</option>
+				  <option value="TeslaModel3LR">Tesla Model 3 LR</option>
+				  <option value="TeslaModel3SR">Tesla Model 3 SR</option>
+				  <option value="ChevyBolt2017">Chevy Bolt (2017+)</option>
+				  <option value="NissanLeaf2018">Nissan Leaf (2018+)</option>
+				  <option value="BMWi32018">BMW i3 (2018+)</option>
+				  <option value="HyundaiIoniq2018">Hyundai Ioniq (2018+)</option>
+				  <option value="KiaSoul2018">Kia Soul (2018+)</option>
+				  <option value="FordFocusE2018">Ford Focus E (2018+)</option>
+
+				</select>
+
+			</div>
+	 	</div>
+
+	 	<div class="flexbox box toprow daily-commute">
+
+
 			<h2> My Daily Commute is: </h2>
 			<p> (Round Trip) </p>
 
-			  <input type="text" name="dailyMiles" id="dailyMiles" class="input-miles">
-			  <p class="daily-miles"> miles </p>
+		  	<input type="text" name="dailyMiles" id="dailyMiles" class="input-miles">
+		  	<p class="daily-miles"> miles </p>
 
-		</div> <!-- end box0 -->
 
-		<div class="flexbox bigbox">
 
-			<div class="innerbigbox bb-left">
+	 	</div>
 
-				<div class="flexbox row row1">
+	 	<div class="flexbox box toprow gas-compare-select">
 
-					<div class="flexbox col col1">
-							
-							<p> My EV (Full) Range is: </p>
+ 			<div class="select-title select-title-right">
+				<h2>Select a gas vehicle to compare</h2>
+			</div>
 
-							<input type="text" name="EV-range" id="evRange" class="range">
+			<div class="flexbox select select-right">
 
-							<p> miles </p>
+				<select id="gas-select">
+				  <option value="AudiQ5">Audi Q5</option>
+				  <option value="BMW740i">BMW 740i</option>
+				  <option value="HyundaiSonata">Hyundai Sonata</option> 
+				  <option value="VolvoS60AWD">Volvo S60 AWD</option> 
+				</select>
 
-							<br>
+			</div>
+	 	</div>
 
-							<p> My EV Battery is: </p>
 
-							<input type="text" name="EV-battery" id="evBattery" class="EV-battery">
+	 	<!-- EV -->
+	 	<div class="flexbox box botrow ev-row-compare">
 
-							<p> Kw/h </p>
+			<div class="flexbox row">
 
-					</div> <!-- end col2 -->
+				<div class="flexbox col col1">
+						
+						<p> My EV (Full) Range is: </p>
 
-					<div class="flexbox col col2">
+						<input type="text" name="EV-range" id="evRange" class="range">
 
-						<div class="circle-wrapper">
+						<p> miles </p>
 
-							<div class="circle">
+						<br>
 
-								<input type="text" name="perkwh" id="perkwh" class="EV-kwh">
+						<p> My EV Battery is: </p>
 
-								<p> per KW/h </p>
+						<input type="text" name="EV-battery" id="evBattery" class="EV-battery">
 
-							</div> <!-- end circle -->
-						</div> <!-- end circle-wrapper -->
-					</div> <!-- end div -->
+						<p> Kw/h </p>
 
-					<div class="flexbox col col3">
-							<input type="text" class="price" id="dailyElectricCost">
+				</div> <!-- end col2 -->
 
-							<p>(Approx)</p>
+				<div class="flexbox col col2">
 
-							<p>Daily electricity cost</p>
+					<div class="circle-wrapper">
 
-					</div> <!-- end col3 -->
-				</div> <!-- end row1 -->
-			</div> <!-- end col1 -->
+						<div class="circle">
 
-			<div class="innerbigbox bb-right">
+							<input type="text" name="perkwh" id="perkwh" class="EV-kwh">
 
-				<div class="flexbox row row1">
+							<p> per KW/h </p>
 
-					<div class="flexbox col col3">
+						</div> <!-- end circle -->
+					</div> <!-- end circle-wrapper -->
+				</div> <!-- end div -->
 
-							<input type="text" class="price" id="dailyGasCost">
+				<div class="flexbox col col3">
+						<p class="price" id="dailyElectricCost"></p>
 
-							<p>(Approx)</p>
+						<p>(Approx)</p>
 
-							<p>Daily gasoline cost</p>
+						<p>Daily electricity cost</p>
 
-					</div> <!-- end col3 -->
-					
-					<div class="flexbox col col2">
+				</div> <!-- end col3 -->
+			</div> <!-- end row1 -->
 
-						<div class="circle-wrapper">
+	 	</div>
 
-							<div class="rectangle">
+	 	<div class="flexbox box botrow gas-row-compare">
 
-								<input type="text" name="pricePerGallon" id="pricePerGallon" class="EV-kwh">
+			<div class="flexbox row">
 
-								<p> per gallon </p>
+				<div class="flexbox col col3">
 
-							</div> <!-- end circle -->
-						</div> <!-- end circle-wrapper -->
-					</div> <!-- end div -->
+						<p class="price" id="dailyGasCost"></p>
 
-					<div class="flexbox col col1">
-							
-							<p> My Gas Vehicle gets: </p>
+						<p>(Approx)</p>
 
-							<input type="text" name="mpg" id="mpg" class="range">
+						<p>Daily gasoline cost</p>
 
-							<p> MPG </p>
+				</div> <!-- end col3 -->
+				
+				<div class="flexbox col col2">
 
-							<br>
+					<div class="circle-wrapper">
 
-					</div> <!-- end col1 -->
-				</div> <!-- end row1 -->
-			</div> <!-- end bb-right -->
-		</div> <!-- end bigbox -->
+						<div class="rectangle">
 
-		<div class="flexbox savings">
+							<input type="text" name="pricePerGallon" id="pricePerGallon" class="EV-kwh">
 
-		</div> <!-- end savings -->
+							<p> per gallon </p>
 
-	<div> <!-- end container -->
+						</div> <!-- end circle -->
+					</div> <!-- end circle-wrapper -->
+				</div> <!-- end col2 -->
 
+				<div class="flexbox col col1">
+						
+					<p> My Gas Vehicle gets: </p>
+
+					<input type="text" name="mpg" id="mpg" class="range">
+
+					<p> MPG </p>
+
+				</div> <!-- end col1 -->
+			</div> <!-- end row1 -->
+	 	</div>
+	</div>
+
+
+ 
 <script src="js/script.js"></script>
-
+ 
 </body>
 </html>
